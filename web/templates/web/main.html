@@ -1,0 +1,134 @@
+{%extends 'web/base.html'%}
+{%load static%}
+{%block content%}
+<section id="wrap_section">
+  <div class="main_img_box">
+    <div class="main_img">
+      <div class="main_introduce_box">
+          <br>
+          <h1>능력&nbsp</h1><h2>과 </h2><h1>성실함&nbsp</h1><h2>을 바탕으로</h2><br>
+          <h1>신뢰&nbsp</h1><h2>가 우선시 생각되는 기업</h2><br><br>
+          <h3>(주)능성산업개발&nbsp</h3><h2> 입니다.</h2><br><br>
+          <p><a href="#">비계구조물해체공사</a> | <a href="#">석면해체공사</a> | <a href="#">토목공사</a> | <a href="#">폐기물수집운반</a> | <a href="#">중장비대여</a></p>
+      </div>
+    </div>
+  </div>
+  <section id="first_section">
+    <div class="round_box">
+      <img src="{%static 'web/img/demolition_7.jpeg'%}">
+      <br><br>
+      <h1>비계물구조해체 석면해체 토목공사</h1><br>
+      <p>탄탄한 기술과 경험을 바탕으로!<br>고객을 최우선으로 하는 건설철학을 바탕으로<br>건축기술이 삶의 질을 높이도록 힘씁니다.</p>
+    </div>
+    <div class="round_box">
+      <img src="{%static 'web/img/demolition_4.jpeg'%}">
+      <br><br>
+      <h1>폐기물수집운반</h1><br>
+      <p>건축물의 신축과 해체시 발생 폐기물 운반<br>보다 신속하고 정확하게 폐기물을 운반하도록<br>노력하고 있습니다.</p>
+    </div>
+    <div class="round_box">
+      <img src="{%static 'web/img/demolition_1.jpeg'%}">
+      <br><br>
+      <h1>중장비대여</h1><br>
+      <p>굴삭기와 크라샤등 다양한 신형 중장비 보유<br>중장비대여도 가능합니다.</p>
+    </div>
+  </section>
+  <hr class="first_hr">
+  <section id="second_section">
+    <div class="gallery_box">
+        <div class="slideshow-contanier">
+          <div class="mySlides">
+            <a href="#">
+            <img src="{%static 'web/img/demolition_1.jpeg'%}">
+            <h1>2020.1.25</h1>
+            <br>
+            <p>경기도 안산시 청룡모텔 작업사진</p><br>
+            <p>비계 구조물 해체, 토목공사</p>
+            </a>
+          </div>
+          <div class="mySlides">
+              <a href="#">
+              <img src="{%static 'web/img/demolition_2.jpeg'%}">
+              <h1>2018.2.8</h1>
+              <br>
+              <p>경기도 안양시 주택단지 작업사진</p><br>
+              <p>비계 구조물 해체, 토목공사, 건설 폐기물 운반</p>
+              </a>
+          </div>
+            <div class="mySlides">
+              <a href="#">
+              <img src="{%static 'web/img/demolition_3.jpeg'%}">
+              <h1>2017.11.25</h1>
+              <br>
+              <p>서울시 구로구 H 아파트 작업사진</p><br>
+              <p>중장비대여</p>
+              </a>
+          </div>
+            <div class="mySlides">
+              <a href="#">
+              <img src="{%static 'web/img/demolition_4.jpeg'%}">
+              <h1>2019.10.6</h1>
+              <br>
+              <p>경기도 시흥시 하나빌라 작업사진</p><br>
+              <p>토목공사, 건설 폐기물 운반, 중장비 대여</p><br>
+              </a>
+          </div>
+            <div class="mySlides">
+              <a href="#">
+              <img src="{%static 'web/img/demolition_5.jpeg'%}">
+              <h1>2019.5.20</h1>
+              <br>
+              <p>경기도 평택시 에이스빌라 작업사진</p><br>
+              <p>비계 구조물 해체</p>
+              </a>
+            </div>
+        </div>
+        <script>
+          var slideIndex = 0;
+          showSlides();
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            $(slides[slideIndex-1]).fadeIn(1000);
+            setTimeout(showSlides, 5000);
+          }
+        </script>
+    </div>
+    <hr class="second_hr">
+    <div class="info_box">
+      <div class="map_img">
+        <a target="_blank" href="https://map.naver.com/v5/entry/place/1172093662?c=14117815.7426436,4482838.2601929,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt">
+        <img src="{%static 'web/img/map.png'%}">
+        </a>
+      </div>
+      <div class="map">
+        <img src="{%static 'web/img/location_logo.png'%}">
+        <h1>찾아오시는 길</h1>
+        <p>경기도 안산시 단원구 광덕3로 87(고잔동) 태극빌딩 302호</p>
+        <p>※ 안산 진흥초등학교 부근</p>
+      </div>
+      <div class="tel">
+        <a href="tel:031-408-4992">
+        <img src="{%static 'web/img/tel_logo.png'%}">
+        <h1>031-408-4992</h1><p>(클릭시 통화연결)</p>
+        </a>
+      </div>
+      <div class="fax">
+        <img src="{%static 'web/img/fax_logo.png'%}">
+        <h1>FAX : 031-408-4992</h1>
+      </div>
+      <div class="email">
+        <a href="mailto:ns93111@naver.com">
+        <img src="{%static 'web/img/email_logo.png'%}">
+        <h1>EMAIL : ns93111@naver.com</h1><br><p>(클릭시 이메일발송)</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
+{%endblock%}
