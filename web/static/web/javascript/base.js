@@ -9,7 +9,7 @@ $(document).ready(function(){
     $(this).css('color','white');
     $(this).find('ul').slideUp(100);
   });
-  $('.sub_menu>li').hover(function(){
+  $('.sub_menu>ul>li').hover(function(){
     $(this).css('transition','.1s ease');
     $(this).css('color','#528afa');
   },function(){

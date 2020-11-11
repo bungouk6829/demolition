@@ -1,0 +1,47 @@
+{%extends 'web/base.html'%}
+{%load static%}
+{%block content%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_5.js'%}"></script>
+<!--측면 메뉴-->
+
+<section id="block_wrap_section">
+  <section id="menu_wrap_section">
+    <div id="menu_name">
+      <h1 class="korean">
+        보유면허
+      </h1>
+      <h1 class="english">
+        Holding License
+      </h1>
+    </div>
+    <div id="content_menu">
+      <img src="{%static 'web/img/menu_bar_1.png'%}">
+      <ul>
+        <a href="{%url 'web:menu_5'%}"><li>보유면허</li></a>
+      </ul>
+      <img src="{%static 'web/img/menu_bar_2.png'%}">
+    </div>
+    <div id="call_center_box">
+      <h1>고객센터</h1>
+      <br>
+      <a href="tel:031-408-4992">
+      <img src="{%static 'web/img/call_gif_logo.jpg'%}">
+      <h2>031-408-4992</h2>
+      <p>(클릭시 통화연결)</p>
+      </a>
+    </div>
+  </section>
+
+<!--컨테이너-->
+
+  <section id="container_section">
+    <div class="container_name">
+      <br><br>
+      <h1>
+        | 보유 면허
+      </h1>
+    </div>
+  </section>
+
+</section>
+{%endblock%}

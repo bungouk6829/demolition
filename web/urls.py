@@ -5,7 +5,10 @@ app_name='web'
 
 urlpatterns=[
 	path('', views.main, name='main'),
-	path('introduction/', views.introduction, name='introduction'),
-	path('history/', views.history, name="history"),
-	path('map/', views.map, name="map"),
-]
+	path('menu_1/<str:page>', views.menu_1, name='menu_1'),
+	path('menu_2/<str:page>', views.menu_2, name='menu_2'),
+	path('menu_3/<str:page>', views.menu_3, name='menu_3'),
+	path('menu_4', views.menu_4, name='menu_4'),
+	path('menu_5', views.menu_5, name='menu_5'),
+	path('menu_6/<str:page>', views.menu_6, name='menu_6'),
+	]

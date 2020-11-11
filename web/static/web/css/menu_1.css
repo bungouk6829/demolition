@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#wrap_section_1{
+#block_wrap_section{
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -8,7 +8,7 @@
   padding-bottom: 50px;
 }
 
-#menu_wrap_section_1{
+#menu_wrap_section{
   text-align: center;
   width: 200px;
   height: 100%;
@@ -22,7 +22,7 @@
 #menu_name h1{
   line-height: 25px;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .korean{
@@ -70,13 +70,14 @@
 }
 
 #call_center_box h1{
-  color:#122B88;
+  color:black;
   font-size: 20px;
+  font-weight: 300;
 }
 
 #call_center_box img{
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 #call_center_box img, h2{
@@ -91,4 +92,25 @@
 #call_center_box p{
   color:#122B88;
   font-size: 15px;
+}
+
+#container_section{
+  margin: 50px 50px;
+  float: left;
+  width: 1000px;
+  height: 1000px;
+  background: #ebebeb;
+  padding: 0px 30px;
+  border-radius: 2px;
+  border: 0.5px solid #d9d9d9;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #c4c4c4;
+}
+
+.container_name{
+  text-align: left;
+}
+
+.container_name h1{
+  color:gray;
+  font-size: 20px;
 }

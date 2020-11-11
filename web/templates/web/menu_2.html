@@ -1,0 +1,81 @@
+{%extends 'web/base.html'%}
+{%load static%}
+{%block content%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_2.js'%}"></script>
+<!--측면 메뉴-->
+
+<section id="block_wrap_section">
+  <section id="menu_wrap_section">
+    <div id="menu_name">
+      <h1 class="korean">
+        {%if page == 'structure'%}
+        비계구조물해체공사
+        {%elif page == 'asbestos'%}
+        석면해체공사
+        {%elif page == 'civil'%}
+        토목공사
+        {%elif page == 'waste'%}
+        폐기물수집운반
+        {%elif page == 'rental'%}
+        중장비대여
+        {%endif%}
+      </h1>
+      <h1 class="english">
+        {%if page == 'structure'%}
+        Structure Demolition
+        {%elif page == 'asbestos'%}
+        Asbestos Demolition
+        {%elif page == 'civil'%}
+        Civil Engineering
+        {%elif page == 'waste'%}
+        Transport Waste
+        {%elif page == 'rental'%}
+        Heavy equipment Rental
+        {%endif%}
+      </h1>
+    </div>
+    <div id="content_menu">
+      <img src="{%static 'web/img/menu_bar_1.png'%}">
+      <ul>
+        <a href="{%url 'web:menu_2' page='structure'%}"><li>비계구조물해체공사</li></a>
+        <a href="{%url 'web:menu_2' page='asbestos'%}"><li>석면해체공사</li></a>
+        <a href="{%url 'web:menu_2' page='civil'%}"><li>토목공사</li></a>
+        <a href="{%url 'web:menu_2' page='waste'%}"><li>폐기물수집운반</li></a>
+        <a href="{%url 'web:menu_2' page='rental'%}"><li>중장비대여</li></a>
+      </ul>
+      <img src="{%static 'web/img/menu_bar_2.png'%}">
+    </div>
+    <div id="call_center_box">
+      <h1>고객센터</h1>
+      <br>
+      <a href="tel:031-408-4992">
+      <img src="{%static 'web/img/call_gif_logo.jpg'%}">
+      <h2>031-408-4992</h2>
+      <p>(클릭시 통화연결)</p>
+      </a>
+    </div>
+  </section>
+
+<!--컨테이너-->
+
+  <section id="container_section">
+    <div class="container_name">
+      <br><br>
+      <h1>
+        {%if page == 'structure'%}
+        | 비계 구조물 해체 공사
+        {%elif page == 'asbestos'%}
+        | 석면 해체 공사
+        {%elif page == 'civil'%}
+        | 토목 공사
+        {%elif page == 'waste'%}
+        | 폐기물 수집 운반
+        {%elif page == 'rental'%}
+        | 중장비 대여
+        {%endif%}
+      </h1>
+    </div>
+  </section>
+
+</section>
+{%endblock%}
