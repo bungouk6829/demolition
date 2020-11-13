@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   href = window.location.href.replace("http://127.0.0.1:8000/menu_6/","");
 
-  if (href == "notice"){
+  if (href == "notice" || href.indexOf("notice") >= 0){
     selector = '#content_menu > ul > a:nth-child(1) > li'
     change_color(selector);
   }
@@ -16,5 +16,6 @@ $(document).ready(function(){
     selector = '#content_menu > ul > a:nth-child(2) > li'
     change_color(selector);
   }
+
 
 });

@@ -1,5 +1,6 @@
 {%extends 'web/base.html'%}
 {%load static%}
+{%load  custom_tag%}
 {%block content%}
 <script type="text/javascript" src="{%static 'web/javascript/menu_6.js'%}"></script>
 <!--측면 메뉴-->
@@ -54,6 +55,46 @@
         {%endif%}
       </h1>
     </div>
+    <br><br><br>
+    <div class="notice_box">
+      <table class="notice_table">
+        <thead>
+              <tr>
+                <th scope="cols">글번호</th>
+                <th scope="cols">작성자</th>
+                <th scope="cols">제목</th>
+                <th scope="cols">작성일</th>
+                <th scope="cols">조회</th>
+              </tr>
+        </thead>
+        <tbody>
+          {%for notice_post in notice_posts%}
+              <tr>
+                <th scope="row">{{notice_post.pk}}</th>
+                <th scope="row">운영자</th>
+                <td class="posts_table_title">
+                  <a href="{%url 'web:detail_notice' 'notice' notice_post.pk%}">
+                  {{notice_post.title|title_slice}}
+                  </a>
+                </td>
+                <td class="posts_table_td">{{notice_post.create_at}}</td>
+                <td class="posts_table_td">{{notice_post.clicks}}</td>
+              </tr>
+           {%endfor%}
+        </tbody>
+        </table>
+        <table class="page_box">
+            <tr>
+              {%if notice_posts.has_previous%}
+              <td class="pre_button"><a href="?p={{notice_posts.previous_page_number}}">이전페이지</a></td>
+              {%endif%}
+              <td>{{ notice_posts.number }} / {{ notice_posts.paginator.num_pages }}</td>
+              {% if notice_posts.has_next %}
+              <td class="next_button"><a href="?p={{notice_posts.next_page_number}}">다음페이지</a></td>
+              {%endif%}
+            </tr>
+        </table>
+     </div>
   </section>
 
 </section>

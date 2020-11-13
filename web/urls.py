@@ -11,4 +11,5 @@ urlpatterns=[
 	path('menu_4', views.menu_4, name='menu_4'),
 	path('menu_5', views.menu_5, name='menu_5'),
 	path('menu_6/<str:page>', views.menu_6, name='menu_6'),
+	path('menu_6/<str:page>/<int:notice_post_pk>', views.detail_notice, name='detail_notice'),
 	]

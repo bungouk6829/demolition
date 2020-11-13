@@ -42,12 +42,12 @@ body{
   cursor: pointer;
   float:left;
   color:white;
-  padding-left: 50px;
+  margin-left: 50px;
   font-size: 20px;
 }
 
 .main_menu>li:first-child{
-  padding-left: 0px;
+  margin-left: 0px;
 }
 
 .sub_menu{
