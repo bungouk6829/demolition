@@ -1,5 +1,6 @@
 {%extends 'web/base.html'%}
 {%load static%}
+{%load  custom_tag%}
 {%block content%}
 <script type="text/javascript" src="{%static 'web/javascript/detail_notice.js'%}"></script>
 <!--측면 메뉴-->
@@ -41,9 +42,11 @@
         </h1>
       </div>
       <br><br><br>
-      {{notice_post.update_clicks}}
-      <div class="notice_box">
-        <table class="notice_table">
+      <div class="display_none">
+        <h1>{{notice_post.update_clicks}}</h1>
+      </div>
+      <div class="detail_notice_box">
+        <table class="detail_notice_table">
           <thead>
                 <tr>
                   <th scope="cols">글번호</th>
@@ -62,14 +65,35 @@
                   <th scope="row">{{notice_post.edit_at}}</th>
                 </tr>
                 <tr>
-                  <td>제목</td>
-                  <td>{{notice_post.title}}</td>
+                  <th scope="row">제목</th>
+                  <th scope="row" colspan="4">{{notice_post.title}}</th>
                 </tr>
-                <div class="post_text">
-                  {{notice_post.text}}
-                </div>
           </tbody>
           </table>
+          <div class="file_box">
+            <h1> 첨부파일 </h1>
+              {%if notice_post.file_1%}
+                <a href="{{notice_post.file_1.url}}" download><h2>{{notice_post.file_1.url | file_name_slice}}</h2></a><br>
+              {%else%}
+                <h2>파일 없음</h2>
+              {%endif%}
+              {%if notice_post.file_2%}
+                <a href="{{notice_post.file_2.url}}" download><h2>{{notice_post.file_2.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if notice_post.file_3%}
+                <a href="{{notice_post.file_3.url}}" download><h2>{{notice_post.file_3.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if notice_post.file_4%}
+                <a href="{{notice_post.file_4.url}}" download><h2>{{notice_post.file_4.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if notice_post.file_5%}
+                <a href="{{notice_post.file_5.url}}" download><h2>{{notice_post.file_5.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+          </div>
+          <div class="post_text">
+            {{notice_post.text|linebreaks}}
+          </div>
+          <hr>
           <div class="button_box">
             <button onClick="history.go(-1);">뒤로가기</button>
           </div>

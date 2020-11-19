@@ -4,8 +4,22 @@ register = template.Library()
 
 @register.filter
 def title_slice(title):
-	if len(title) > 28:
-		title = title[:28] + '...'
+	if len(title) > 40:
+		title = title[:40] + '...'
+		return title
+	else :
+		return title
+
+@register.filter
+def file_name_slice(file_name):
+	file_name = file_name.replace('/media/files/',"")
+	return file_name
+
+
+@register.filter
+def result_post_slice(title):
+	if len(title) > 70:
+		title = title[:70] + '...'
 		return title
 	else :
 		return title

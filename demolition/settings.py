@@ -70,6 +70,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DEFAULT_CHARSET = 'utf-8' 
 
 LANGUAGE_CODE = 'ko'
 
@@ -78,3 +79,7 @@ TIME_ZONE = 'Asia/Seoul'
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'

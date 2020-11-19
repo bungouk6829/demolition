@@ -8,24 +8,12 @@ $(document).ready(function(){
 
   href = window.location.href.replace("http://127.0.0.1:8000/menu_2/","");
 
-  if (href == "structure"){
+  if (href == "business"){
     selector = '#content_menu > ul > a:nth-child(1) > li'
     change_color(selector);
   }
-  else if (href == "asbestos"){
+  else if (href == "major"){
     selector = '#content_menu > ul > a:nth-child(2) > li'
-    change_color(selector);
-  }
-  else if (href == "civil"){
-    selector = '#content_menu > ul > a:nth-child(3) > li'
-    change_color(selector);
-  }
-  else if (href == "waste"){
-    selector = '#content_menu > ul > a:nth-child(4) > li'
-    change_color(selector);
-  }
-  else if (href == "rental"){
-    selector = '#content_menu > ul > a:nth-child(5) > li'
     change_color(selector);
   }
 });

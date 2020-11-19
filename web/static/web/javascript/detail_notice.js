@@ -7,4 +7,5 @@ $(document).ready(function(){
   }
   selector = '#content_menu > ul > a:nth-child(1) > li'
   change_color(selector);
+
 });

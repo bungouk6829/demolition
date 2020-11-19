@@ -4,6 +4,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 100%;
+  height:auto;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -71,6 +72,7 @@ body{
 
 #content_section{
   order:2;
+  height:auto;
 }
 
 #footer_section{

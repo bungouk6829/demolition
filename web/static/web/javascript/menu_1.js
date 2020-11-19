@@ -16,8 +16,16 @@ $(document).ready(function(){
     selector = '#content_menu > ul > a:nth-child(2) > li'
     change_color(selector);
   }
-  else if (href == "map"){
+  else if (href == "organization"){
     selector = '#content_menu > ul > a:nth-child(3) > li'
+    change_color(selector);
+  }
+  else if (href == "management"){
+    selector = '#content_menu > ul > a:nth-child(4) > li'
+    change_color(selector);
+  }
+  else if (href == "map"){
+    selector = '#content_menu > ul > a:nth-child(5) > li'
     change_color(selector);
   }
 });

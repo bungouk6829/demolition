@@ -2,13 +2,19 @@ from django.db import models
 
 class Result_post(models.Model):
 
-    title = models.CharField(max_length=50)
     text = models.TextField(max_length=5000, blank=True, null=True)
-    create_at = models.DateField(auto_now_add=True)
-    edit_at =  models.DateTimeField(auto_now=True)
+    address = models.CharField(max_length=200)
+    business_name = models.CharField(max_length=200)
+    business_start_at = models.DateField(null=True, blank=True)
+    business_finish_at = models.DateField(null=True, blank=True)
+    file_1 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_2 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_3 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_4 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_5 = models.FileField(upload_to='files/', null=True, blank=True)
 
     def __str__(self):
-        return self.title
+        return self.address
 
     class Meta:
         db_table = 'result_posts'
@@ -20,6 +26,12 @@ class Notice_post(models.Model):
     create_at = models.DateField(auto_now_add=True)
     edit_at = models.DateTimeField(auto_now=True)
     clicks = models.IntegerField(default=1)
+    file_1 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_2 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_3 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_4 = models.FileField(upload_to='files/', null=True, blank=True)
+    file_5 = models.FileField(upload_to='files/', null=True, blank=True)
+
 
     @property
     def update_clicks(self):

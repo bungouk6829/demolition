@@ -7,4 +7,11 @@ $(document).ready(function(){
   }
   selector = '#content_menu > ul > a:nth-child(1) > li'
   change_color(selector);
+
+// 이미지를 magnific popup image viewer에 연결시킴
+  $('.mg-link').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true
+  });
+  
 });

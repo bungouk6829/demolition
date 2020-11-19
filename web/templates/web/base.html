@@ -15,10 +15,15 @@
 	<link rel="stylesheet" href="{%static 'web/css/menu_5.css'%}">
 	<link rel="stylesheet" href="{%static 'web/css/menu_6.css'%}">
 	<link rel="stylesheet" href="{%static 'web/css/detail_notice.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/detail_result.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/magnific-popup.css'%}">
 	<!-- 구글 폰트 -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<title>(주)능성산업개발 - 성실함과 신뢰를 기본으로</title>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="{%static 'web/javascript/jquery.magnific-popup.min.js'%}"></script>
 </head>
 <body>
 
@@ -31,33 +36,25 @@
 		</div>
 		<div class="main_menu_box">
 			<ul class="main_menu">
-				<li class="menu_hover_1">회사소개
+				<li class="menu_hover_1"><a href="{%url 'web:menu_1' page="company"%}">회사소개</a>
 					<ul class="sub_menu">
-						<li><a href="{%url 'web:menu_1' page="company"%}">• 인사말</a></li>
+						<li><a href="{%url 'web:menu_1' page="company"%}">• 인사말</a></li>
 						<li><a href="{%url 'web:menu_1' page="history"%}">• 회사연혁</a></li>
+						<li><a href="{%url 'web:menu_1' page="organization"%}">• 조직도</a></li>
+						<li><a href="{%url 'web:menu_1' page="management"%}">• 경영방침</a></li>
 						<li><a href="{%url 'web:menu_1' page="map"%}">• 찾아오시는길</a></li>
 					</ul>
 				</li>
-				<li class="menu_hover_2">사업분야
+				<li class="menu_hover_2"><a href="{%url 'web:menu_2' page="business"%}">사업소개</a>
 					<ul class="sub_menu">
-						<li><a href="{%url 'web:menu_2' page="structure"%}">• 비계구조물해체공사</a></li>
-						<li><a href="{%url 'web:menu_2' page="asbestos"%}">• 석면해체공사</a></li>
-						<li><a href="{%url 'web:menu_2' page="civil"%}">• 토목공사</a></li>
-						<li><a href="{%url 'web:menu_2' page="waste"%}">• 폐기물수집운반</a></li>
-						<li><a href="{%url 'web:menu_2' page="rental"%}">• 중장비대여</a></li>
+						<li><a href="{%url 'web:menu_2' page="business"%}">• 사업분야</a></li>
+						<li><a href="{%url 'web:menu_2' page="major"%}">• 주요공사</a></li>
 					</ul>
 				</li>
-				<li class="menu_hover_3">사업실적
-					<ul class="sub_menu">
-						<li><a href="{%url 'web:menu_3' page="demolition"%}">• 철거</a></li>
-						<li><a href="{%url 'web:menu_3' page="civil"%}">• 토목</a></li>
-						<li><a href="{%url 'web:menu_3' page="waste"%}">• 폐기물</a></li>
-						<li><a href="{%url 'web:menu_3' page="rental"%}">• 중장비대여</a></li>
-					</ul>
-				</li>
+				<li><a href="{%url 'web:menu_3'%}">사업실적</a></li>
 				<li><a href="{%url 'web:menu_4'%}">보유중장비</a></li>
 				<li><a href="{%url 'web:menu_5'%}">보유면허</a></li>
-				<li class="menu_hover_4">고객센터
+				<li class="menu_hover_3"><a href="{%url 'web:menu_6' page="notice"%}">고객센터</a>
 					<ul class="sub_menu">
 						<li><a href="{%url 'web:menu_6' page="notice"%}">• 공지사항</a></li>
 						<li><a href="{%url 'web:menu_6' page="information"%}">• 문의하기</a></li>

@@ -15,23 +15,7 @@ $(document).ready(function(){
     $(selector).css('opacity', '0.7');
   }
 
-  href = window.location.href.replace("http://127.0.0.1:8000/menu_3/","");
-
-  if (href == "demolition"){
-    selector = '#content_menu > ul > a:nth-child(1) > li'
-    change_color(selector);
-  }
-  else if (href == "civil"){
-    selector = '#content_menu > ul > a:nth-child(2) > li'
-    change_color(selector);
-  }
-  else if (href == "waste"){
-    selector = '#content_menu > ul > a:nth-child(3) > li'
-    change_color(selector);
-  }
-  else if (href == "rental"){
-    selector = '#content_menu > ul > a:nth-child(4) > li'
-    change_color(selector);
-  }
+  selector = '#content_menu > ul > a:nth-child(1) > li'
+  change_color(selector);
 
 });
