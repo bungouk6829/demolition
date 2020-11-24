@@ -74,7 +74,7 @@
                 <th scope="row">{{notice_post.pk}}</th>
                 <th scope="row">운영자</th>
                 <td class="posts_table_title">
-                  <a href="{%url 'web:detail_notice' 'notice' notice_post.pk%}">
+                  <a href="{%url 'web:detail_post' 'notice' notice_post.pk%}">
                   {{notice_post.title|title_slice}}
                   </a>
                 </td>
@@ -96,6 +96,46 @@
             </tr>
         </table>
      </div>
+     {%elif page == 'information'%}
+     <div class="information_box">
+       <table class="information_table">
+         <thead>
+               <tr>
+                 <th scope="cols">글번호</th>
+                 <th scope="cols">작성자</th>
+                 <th scope="cols">제목</th>
+                 <th scope="cols">작성일</th>
+                 <th scope="cols">조회</th>
+               </tr>
+         </thead>
+         <tbody>
+           {%for information_post in information_posts%}
+               <tr>
+                 <th scope="row">{{information_post.pk}}</th>
+                 <th scope="row">{{information_post.author}}</th>
+                 <td class="posts_table_title">
+                   <a href="{%url 'web:input_information_post_password' 'information' information_post.pk 'enter'%}">
+                   {{information_post.title|title_slice}}
+                   </a>
+                 </td>
+                 <td class="posts_table_td">{{information.create_at}}</td>
+                 <td class="posts_table_td">{{information.clicks}}</td>
+               </tr>
+            {%endfor%}
+         </tbody>
+         </table>
+         <table class="page_box">
+             <tr>
+               {%if information_posts.has_previous%}
+               <td class="pre_button"><a href="?p={{information_posts.previous_page_number}}">◀</a></td>
+               {%endif%}
+               <td>{{ information_posts.number }} / {{ information_posts.paginator.num_pages }}</td>
+               {% if information_posts.has_next %}
+               <td class="next_button"><a href="?p={{information_posts.next_page_number}}">▶</a></td>
+               {%endif%}
+             </tr>
+         </table>
+      </div>
      {%endif%}
   </section>
 

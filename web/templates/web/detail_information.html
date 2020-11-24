@@ -1,0 +1,107 @@
+{%extends 'web/base.html'%}
+{%load static%}
+{%load  custom_tag%}
+{%block content%}
+<script type="text/javascript" src="{%static 'web/javascript/detail_information.js'%}"></script>
+<!--측면 메뉴-->
+<section id="block_wrap_section">
+  <section id="menu_wrap_section">
+    <div id="menu_name">
+      <h1 class="korean">
+        문의하기
+      </h1>
+      <h1 class="english">
+        Information
+      </h1>
+    </div>
+    <div id="content_menu">
+      <img src="{%static 'web/img/menu_bar_1.png'%}">
+      <ul>
+        <a href="{%url 'web:menu_6' page='notice'%}"><li>공지사항</li></a>
+        <a href="{%url 'web:menu_6' page='information'%}"><li>문의하기</li></a>
+      </ul>
+      <img src="{%static 'web/img/menu_bar_2.png'%}">
+    </div>
+    <div id="call_center_box">
+      <h1>고객센터</h1>
+      <br>
+      <a href="tel:031-408-4992">
+      <img src="{%static 'web/img/call_gif_logo.jpg'%}">
+      <h2>031-408-4992</h2>
+      <p>(클릭시 통화연결)</p>
+      </a>
+    </div>
+  </section>
+<!--컨테이너-->
+
+    <section id="container_section">
+      <div class="container_name">
+        <br><br>
+        <h1>
+          | 문의하기
+        </h1>
+      </div>
+      <br><br><br>
+      <div class="display_none">
+        <h1>{{information_post.update_clicks}}</h1>
+      </div>
+      <div class="detail_information_box">
+        <table class="detail_information_table">
+          <thead>
+                <tr>
+                  <th scope="cols">글번호</th>
+                  <th scope="cols">작성자</th>
+                  <th scope="cols">조회수</th>
+                  <th scope="cols">전화번호</th>
+                  <th scope="cols">날짜</th>
+                </tr>
+          </thead>
+          <tbody>
+                <tr>
+                  <th scope="row">{{information_post.pk}}</th>
+                  <th scope="row">{{information_post.author}}</th>
+                  <th scope="row">{{information_post.clicks}}</th>
+                  <th scope="row">{{information_post.phone_number}}</th>
+                  <th scope="row">{{information.create_at}}</th>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <th scope="row" colspan="4">{{information_post.title}}</th>
+                </tr>
+          </tbody>
+          </table>
+          <div class="file_box">
+            <h1> 첨부파일 </h1>
+              {%if information_post.file_1%}
+                <a href="{{information_post.file_1.url}}" download><h2>{{information_post.file_1.url | file_name_slice}}</h2></a><br>
+              {%else%}
+                <h2>파일 없음</h2>
+              {%endif%}
+              {%if information_post.file_2%}
+                <a href="{{information_post.file_2.url}}" download><h2>{{information_post.file_2.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if information_post.file_3%}
+                <a href="{{information_post.file_3.url}}" download><h2>{{information_post.file_3.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if information_post.file_4%}
+                <a href="{{information_post.file_4.url}}" download><h2>{{information_post.file_4.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if information_post.file_5%}
+                <a href="{{information_post.file_5.url}}" download><h2>{{information_post.file_5.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+          </div>
+          <div class="post_text">
+            {{information_post.text|linebreaks}}
+          </div>
+          <hr>
+            <div class="button_box">
+              <button onClick="history.go(-1);">뒤로가기</button>
+            </div>
+            <div class="remove_button_box">
+              <button onClick="location.href='{%url 'web:input_information_post_password' 'information' information_post.pk 'delete'%}'">삭제하기</button>
+            </div>
+       </div>
+    </section>
+
+  </section>
+  {%endblock%}
