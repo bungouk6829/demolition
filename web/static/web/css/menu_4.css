@@ -50,3 +50,42 @@
 .equipment_gallery_box img:first-child{
   margin-left: 0px;
 }
+
+@media all and (max-width:1280px) {
+
+  .equipment_box{
+    width: 100%;
+    height:auto;
+  }
+
+  .equipment_img_box{
+    width: 100%;
+    height: auto;
+  }
+
+  .equipment_img_box img{
+    width: 70%;
+    height: auto;
+  }
+
+  .equipment_img_box h1{
+    font-size:15px;
+  }
+
+  .equipment_img_box h2{
+    font-size:13px;
+  }
+
+  .equipment_gallery_box{
+    width: 100%;
+    height: auto;
+  }
+
+  .equipment_gallery_box img{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 25%;
+    height: auto;
+  }
+
+}

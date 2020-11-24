@@ -111,3 +111,28 @@
   margin:30px;
   font-size: 13px;
 }
+
+@media all and (max-width:1280px) {
+
+  .detail_result_box{
+    width: 100%;
+    height: auto;
+    margin-top:20px;
+  }
+
+  .detail_result_box thead tr th{
+    font-size: 13px;
+  }
+
+  .detail_result_box tbody tr th{
+    font-size: 13px;
+  }
+
+  div.file_box > h1, div.detail_result_box > div.file_box > h2, div.detail_result_box > div.file_box > a > h2{
+    font-size: 11px;
+  }
+
+  div.post_text{
+    font-size: 13px;
+
+}

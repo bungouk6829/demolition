@@ -87,3 +87,30 @@
   font-weight: 500;
   color: black;
 }
+
+@media all and (max-width:1280px) {
+
+  .result_box{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .result_table thead tr th{
+    font-size: 13px;
+  }
+
+  .result_table thead tr th:last-child{
+    display: none;
+  }
+
+  .result_table tbody tr th:last-child{
+    display: none;
+  }
+
+  .page_box tr td a, .page_box tr td{
+    font-size: 13px;
+  }
+
+}

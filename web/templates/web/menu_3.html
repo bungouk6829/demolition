@@ -69,11 +69,11 @@
         <table class="page_box">
             <tr>
               {%if result_posts.has_previous%}
-              <td class="pre_button"><a href="?p={{result_posts.previous_page_number}}">이전페이지</a></td>
+              <td class="pre_button"><a href="?p={{result_posts.previous_page_number}}">◀</a></td>
               {%endif%}
               <td>{{ result_posts.number }} / {{ result_posts.paginator.num_pages }}</td>
               {% if result_posts.has_next %}
-              <td class="next_button"><a href="?p={{result_posts.next_page_number}}">다음페이지</a></td>
+              <td class="next_button"><a href="?p={{result_posts.next_page_number}}">▶</a></td>
               {%endif%}
             </tr>
         </table>

@@ -298,6 +298,7 @@
     padding: 0px;
     width: 100%;
     height: auto;
+    overflow: hidden;
   }
 
   #menu_wrap_section{
@@ -309,6 +310,7 @@
     height: auto;
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
   }
 
   .container_name{
@@ -319,6 +321,7 @@
     margin: 0px;
     padding: 0px;
     margin-top:70px;
+    overflow: hidden;
   }
 
   .company_box{

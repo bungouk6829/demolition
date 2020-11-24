@@ -90,3 +90,60 @@
   font-weight: 500;
   color: black;
 }
+
+
+@media all and (max-width:1280px) {
+
+  .notice_box{
+    width: 100%;
+    height: auto;
+    margin:0px;
+    padding:0px;
+    margin-top: 20px;
+    padding-bottom:20px;
+  }
+
+  .notice_table thead tr th{
+    font-size:10px;
+  }
+
+  .notice_table tbody tr th, .notice_table tbody tr td{
+    font-size: 10px;
+  }
+
+  .posts_table_title a{
+    font-size: 13px;
+  }
+
+  .notice_table thead th:nth-child(1){
+    width:90px;
+  }
+
+  .notice_table thead th:nth-child(2){
+    width:100px;
+  }
+
+  .notice_table thead th:nth-child(4){
+    width:150px;
+  }
+
+  .notice_table thead th:last-child{
+    display:none;
+  }
+
+  .notice_table tbody tr td:last-child{
+    display:none;
+  }
+
+  .page_box tr td a, .page_box tr td{
+    font-size: 13px;
+  }
+
+  .page_box tr td{
+    width: 100px;
+    margin:0px;
+    padding:0px;
+  }
+
+
+}

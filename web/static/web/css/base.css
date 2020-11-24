@@ -154,6 +154,7 @@ body{
     width:150px;
     height:auto;
     color:white;
+    opacity: 0.950;
   }
 
   .mobile_menu li a{
