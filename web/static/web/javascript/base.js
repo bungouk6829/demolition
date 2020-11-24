@@ -16,4 +16,7 @@ $(document).ready(function(){
     $(this).css('transition','.1s ease');
     $(this).css('color','white');
   });
+  $('.mobile_toogle_menu_btn > img').click(function(){
+    $(.mobile_)
+  });
 });

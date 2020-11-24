@@ -230,7 +230,9 @@
   .main_img{
     width:100%;
     height: 600px;
+    background-image: url('../img/main_img_2.jpg');
     background-size: cover;
+    background-attachment:scroll;
   }
 
   .main_introduce_box{
@@ -239,15 +241,15 @@
   }
 
   .main_introduce_box h1{
-    font-size:18px;
+    font-size:20px;
   }
 
   .main_introduce_box h2, .main_introduce_box h3{
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .main_introduce_box p{
-    font-size: 13px;
+    font-size: 15px;
   }
 
   #first_section{

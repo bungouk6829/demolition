@@ -67,6 +67,33 @@
 		</div>
 	</section>
 
+	<section class="mobile_toggle_menu_section">
+		<ul class="mobile_menu">
+			<li class="mobile_hover_1"><a href="{%url 'web:menu_1' page="company"%}">회사소개</a>
+				<ul class="sub_menu">
+					<li><a href="{%url 'web:menu_1' page="company"%}">• 인사말</a></li>
+					<li><a href="{%url 'web:menu_1' page="history"%}">• 회사연혁</a></li>
+					<li><a href="{%url 'web:menu_1' page="organization"%}">• 조직도</a></li>
+					<li><a href="{%url 'web:menu_1' page="management"%}">• 경영방침</a></li>
+					<li><a href="{%url 'web:menu_1' page="map"%}">• 찾아오시는길</a></li>
+				</ul>
+			</li>
+			<li class="mobile_hover_2"><a href="{%url 'web:menu_2' page="business"%}">사업소개</a>
+				<ul class="sub_menu">
+					<li><a href="{%url 'web:menu_2' page="business"%}">• 사업분야</a></li>
+					<li><a href="{%url 'web:menu_2' page="major"%}">• 주요공사</a></li>
+				</ul>
+			</li>
+			<li><a href="{%url 'web:menu_3'%}">사업실적</a></li>
+			<li><a href="{%url 'web:menu_4'%}">보유중장비</a></li>
+			<li><a href="{%url 'web:menu_5'%}">보유면허</a></li>
+			<li class="mobile_hover_3"><a href="{%url 'web:menu_6' page="notice"%}">고객센터</a>
+				<ul class="sub_menu">
+					<li><a href="{%url 'web:menu_6' page="notice"%}">• 공지사항</a></li>
+					<li><a href="{%url 'web:menu_6' page="information"%}">• 문의하기</a></li>
+				</ul>
+	</section>
+
 	<section id="content_section">
 		{%block content%}
 		{%endblock%}
