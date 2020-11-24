@@ -213,3 +213,158 @@
   font-size: 15px;
   color:black;
 }
+
+
+@media all and (max-width:1280px) {
+
+  #wrap_section{
+    width: 100%;
+    height: auto;
+  }
+
+  .main_img_box{
+    width: 100%;
+    height: 600px;
+  }
+
+  .main_img{
+    width:100%;
+    height: 600px;
+    background-size: cover;
+  }
+
+  .main_introduce_box{
+    width: 70%;
+    height: auto;
+  }
+
+  .main_introduce_box h1{
+    font-size:18px;
+  }
+
+  .main_introduce_box h2, .main_introduce_box h3{
+    font-size: 15px;
+  }
+
+  .main_introduce_box p{
+    font-size: 13px;
+  }
+
+  #first_section{
+    order:2;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .round_box{
+    width: 400px;
+    height:150px;
+    margin-top:20px;
+    display: inline-block;
+  }
+
+  .round_box img{
+    width: 120px;
+    height:120px;
+    float:left;
+  }
+
+  .round_box h1{
+    margin-top: -30px;
+    padding-left: 10px;
+    float:left;
+    font-size: 13px;
+  }
+
+  .round_box:first-child{
+    margin-left: 20px;
+  }
+
+  .round_box p{
+    margin-top: -30px;
+    text-align:left;
+    padding-left: 10px;
+    float:left;
+    font-size: 13px;
+  }
+
+  #second_section{
+    order:3;
+    width:100%;
+    height: auto;
+  }
+
+  .first_hr, .second_hr{
+    align:center;
+    width: 90%;
+  }
+
+  .gallery_box{
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .mySlides img{
+    width:90%;
+    height: auto;
+    float:none;
+  }
+
+  .mySlides h1{
+    font-size: 15px;
+    float:none;
+  }
+
+  .mySlides p{
+    float:none;
+    font-size: 13px;
+  }
+
+  .mySlides{
+    margin:0px;
+    padding:0px;
+    text-align:center;
+    padding-bottom: 30px;
+  }
+
+  .info_box{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .map_img{
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .map_img img{
+    width: 80%;
+    height: auto;
+
+  }
+
+  .map, .tel, .fax, .email{
+    width: 100%;
+    height: auto;
+  }
+
+  .map img, .tel img, .fax img, .email img{
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+  }
+
+  .map h1, .map p, .tel h1, .tel p, .fax h1, .fax p, .email h1{
+    font-size: 15px;
+  }
+
+
+}
