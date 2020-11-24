@@ -16,7 +16,11 @@ $(document).ready(function(){
     $(this).css('transition','.1s ease');
     $(this).css('color','white');
   });
-  $('.mobile_toogle_menu_btn > img').click(function(){
-    $(.mobile_)
+  $('#header_section > div.mobile_toggle_menu_btn > img').click(function(){
+    $('.mobile_menu').toggle(200);
+  });
+  $('.mobile_menu>li').click(function(){
+    $('.mobile_menu>li').find('ul').hide();
+    $(this).find('ul').toggle(100);
   });
 });

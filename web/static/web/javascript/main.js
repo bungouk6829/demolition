@@ -8,6 +8,7 @@ function showSlides() {
   }
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
+  $(slides[slideIndex-1]).css('z-index','-1');
   $(slides[slideIndex-1]).fadeIn(1000);
   setTimeout(showSlides, 5000);
 }
