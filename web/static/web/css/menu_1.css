@@ -290,3 +290,168 @@
   font-weight: 100;
   line-height:30px;
 }
+
+@media all and (max-width:1280px) {
+
+  #block_wrap_section{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+  }
+
+  #menu_wrap_section{
+    display:none;
+  }
+
+  #container_section{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .container_name{
+    display: none;
+  }
+
+  .content_box{
+    margin: 0px;
+    padding: 0px;
+    margin-top:70px;
+  }
+
+  .company_box{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    background-size: cover;
+    background-position: right;
+  }
+
+  .company_box h2{
+    font-size: 15px;
+  }
+
+  .company_box h1{
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px;
+    font-size: 18px;
+  }
+
+  .company_box h3{
+    color:black;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+  }
+
+  .history_box{
+    width: 100%;
+    height: auto;
+  }
+
+  .history_first_box img{
+    width: 100%;
+    height: auto;
+  }
+
+  .history_second_box{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding-left: 10px;
+    background-position: bottom;
+  }
+
+  .organization_box{
+    width: 100%;
+    height: auto;
+  }
+
+  .organization_first_box{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .organization_first_box img{
+    width: 100%;
+    height: auto;
+  }
+
+  .organization_second_box{
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+    background-position: bottom;
+  }
+
+  .management_box{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .management_first_box{
+      width: 100%;
+      height: auto;
+  }
+
+  .management_first_box h1{
+    font-size: 30px;
+  }
+
+  .management_first_box h2{
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+  }
+
+  .management_second_box{
+    background-size: contain;
+    margin-top: -300px;
+    padding:0px;
+    background-position: bottom;
+  }
+
+  .map_box{
+    padding: 0px;
+    margin:0px;
+    width: 100%;
+    height: auto;
+  }
+
+  #container_section > div.content_box > div.map_box > a > img{
+    padding: 0px;
+    margin:0px;
+    padding-top: 50px;
+    border: 0px;
+    width:80%;
+    height:auto;
+  }
+
+  .map_box img{
+    width:20px;
+    height:20px;
+  }
+
+  .map_box h1{
+    font-size: 18px;
+  }
+
+  .map_box p{
+    font-size: 15px;
+  }
+
+}
