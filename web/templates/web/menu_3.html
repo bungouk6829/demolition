@@ -60,7 +60,7 @@
                   {{result_post.address | result_post_slice}}
                   </a>
                 </td>
-                <th scope="row">{{result_post.business_name}}</th>
+                <th scope="row"><a href="{%url 'web:detail_result' result_post.pk%}">{{result_post.business_name | result_post_slice}}</a></th>
                 <th scope="row">{{result_post.business_start_at}}</th>
               </tr>
            {%endfor%}

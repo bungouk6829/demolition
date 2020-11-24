@@ -33,7 +33,7 @@
 
 
 
-.result_table tbody th {
+.result_table tbody th{
   height: 10px;
   padding: 10px;
   font-size: 13px;
@@ -42,6 +42,11 @@
   border-bottom: 1px solid #ccc;
   background: #f3f6f7;
   border-right: 1px solid #ccc;
+}
+
+.result_table tbody tr th a{
+  color:gray;
+  font-size: 13px;
 }
 
 .posts_table_title{
