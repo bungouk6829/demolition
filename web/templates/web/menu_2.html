@@ -1,59 +1,37 @@
-{%extends 'web/base.html'%}
+{%extends 'web/base_menu.html'%}
 {%load static%}
-{%block content%}
-<script type="text/javascript" src="{%static 'web/javascript/menu_2.js'%}"></script>
-<!--측면 메뉴-->
 
-<section id="block_wrap_section">
-  <section id="menu_wrap_section">
-    <div id="menu_name">
-      <h1 class="korean">
+{%block korean%}
         {%if page == 'business'%}
         사업분야
         {%elif page == 'major'%}
         주요공사
         {%endif%}
-      </h1>
-      <h1 class="english">
+{%endblock%}
+
+{%block english%}
         {%if page == 'business'%}
         Business
         {%elif page == 'major'%}
         Major Business
         {%endif%}
-      </h1>
-    </div>
-    <div id="content_menu">
-      <img src="{%static 'web/img/menu_bar_1.png'%}">
-      <ul>
-        <a href="{%url 'web:menu_2' page='business'%}"><li>사업분야</li></a>
-        <a href="{%url 'web:menu_2' page='major'%}"><li>주요공사</li></a>
-      </ul>
-      <img src="{%static 'web/img/menu_bar_2.png'%}">
-    </div>
-    <div id="call_center_box">
-      <h1>고객센터</h1>
-      <br>
-      <a href="tel:031-408-4992">
-      <img src="{%static 'web/img/call_gif_logo.jpg'%}">
-      <h2>031-408-4992</h2>
-      <p>(클릭시 통화연결)</p>
-      </a>
-    </div>
-  </section>
+{%endblock%}
+
+{%block menu%}
+        <a href="{%url 'web:menu' page='business'%}"><li>사업분야</li></a>
+        <a href="{%url 'web:menu' page='major'%}"><li>주요공사</li></a>
+{%endblock%}
 
 <!--컨테이너-->
-
-  <section id="container_section">
-    <div class="container_name">
-      <br><br>
-      <h1>
+{%block page%}
         {%if page == 'business'%}
         | 사업 분야
         {%elif page == 'major'%}
         | 주요 공사
         {%endif%}
-      </h1>
-    </div>
+{%endblock%}
+
+{%block container%}
     <div class="content_box">
       {%if page == 'business'%}
         <div class="business_introduce_box">
@@ -141,7 +119,4 @@
         </div>
       {%endif%}
     </div>
-  </section>
-
-</section>
 {%endblock%}

@@ -1,47 +1,26 @@
-{%extends 'web/base.html'%}
+{%extends 'web/base_menu.html'%}
 {%load static%}
 {%load  custom_tag%}
-{%block content%}
-<script type="text/javascript" src="{%static 'web/javascript/detail_notice.js'%}"></script>
-<!--측면 메뉴-->
-<section id="block_wrap_section">
-  <section id="menu_wrap_section">
-    <div id="menu_name">
-      <h1 class="korean">
+
+{%block korean%}
         공지사항
-      </h1>
-      <h1 class="english">
+{%endblock%}
+
+{%block english%}
         Notice
-      </h1>
-    </div>
-    <div id="content_menu">
-      <img src="{%static 'web/img/menu_bar_1.png'%}">
-      <ul>
-        <a href="{%url 'web:menu_6' page='notice'%}"><li>공지사항</li></a>
-        <a href="{%url 'web:menu_6' page='information'%}"><li>문의하기</li></a>
-      </ul>
-      <img src="{%static 'web/img/menu_bar_2.png'%}">
-    </div>
-    <div id="call_center_box">
-      <h1>고객센터</h1>
-      <br>
-      <a href="tel:031-408-4992">
-      <img src="{%static 'web/img/call_gif_logo.jpg'%}">
-      <h2>031-408-4992</h2>
-      <p>(클릭시 통화연결)</p>
-      </a>
-    </div>
-  </section>
+{%endblock%}
+
+{%block menu%}
+        <a href="{%url 'web:menu' page='notice'%}"><li>공지사항</li></a>
+        <a href="{%url 'web:menu' page='information'%}"><li>문의하기</li></a>
+{%endblock%}
 <!--컨테이너-->
 
-    <section id="container_section">
-      <div class="container_name">
-        <br><br>
-        <h1>
+{%block page%}
           | 공지사항
-        </h1>
-      </div>
-      <br><br><br>
+{%endblock%}
+
+{%block container%}
       <div class="display_none">
         <h1>{{notice_post.update_clicks}}</h1>
       </div>
@@ -49,7 +28,7 @@
         <table class="detail_notice_table">
           <thead>
                 <tr>
-                  <th scope="cols">글번호</th>
+                  <th scope="cols">번호</th>
                   <th scope="cols">작성자</th>
                   <th scope="cols">조회수</th>
                   <th scope="cols">날짜</th>
@@ -96,7 +75,4 @@
             <button onClick="history.go(-1);">뒤로가기</button>
           </div>
        </div>
-    </section>
-
-  </section>
   {%endblock%}
