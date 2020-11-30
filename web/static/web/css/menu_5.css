@@ -7,11 +7,11 @@
 }
 
 #container_section > div.content_box > div > a > img{
-  display:inline;
+  display:inline-block;
   width:150px;
   height:200px;
   border: 1px solid #d4d4d4;
-  margin-left:40px;
+  margin-left:25px;
   margin-top: 30px;
 }
 
