@@ -10,11 +10,10 @@ def main(request):
 		return render(request, 'web/main.html')
 
 	except Exception:
-		HttpResponse(status=404)
+		return HttpResponse(status=404)
 
 def menu(request, page):
 
-	try:
 		if page == "company" or page == "history" or page == "organization" or page == "map" or page == "management":
 			return render(request, 'web/menu_1.html', {'page':page})
 
@@ -49,8 +48,6 @@ def menu(request, page):
 				information_posts = pagenator.get_page(page_number)
 				return render(request, 'web/menu_6.html', {'page':page, 'information_posts':information_posts})
 
-	except Exception:
-		HttpResponse(status=404)
 
 def detail_post(request, page, post_pk):
 
@@ -74,7 +71,7 @@ def detail_post(request, page, post_pk):
 			return render(request, 'web/detail_result.html', {'page':page, 'result_post':result_post})
 
 	except Exception:
-		HttpResponse(status=404)
+		return HttpResponse(status=404)
 
 def edit_information(request, page, post_pk, name):
 
@@ -89,7 +86,7 @@ def edit_information(request, page, post_pk, name):
 		return render(request, 'web/check_password_information_post.html', {'name':name, 'page':page, 'success':success})
 
 	except Exception:
-		HttpResponse(status=404)
+		return HttpResponse(status=404)
 
 def input_information_post_password(request, page, post_pk, name):
 
@@ -98,7 +95,7 @@ def input_information_post_password(request, page, post_pk, name):
 		return render(request, 'web/input_information_post_password.html', {'page':page, 'information_post':information_post, 'name':name})
 
 	except Exception:
-		HttpResponse(status=404)
+		return HttpResponse(status=404)
 
 def new_information_post(request, page):
 
@@ -126,4 +123,4 @@ def new_information_post(request, page):
 			return render(request, 'web/new_information_post.html', {'page':page})
 
 	except Exception:
-		HttpResponse(status=404)
+		return HttpResponse(status=404)
