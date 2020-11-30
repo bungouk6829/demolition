@@ -14,6 +14,7 @@ def main(request):
 
 def menu(request, page):
 
+	try:
 		if page == "company" or page == "history" or page == "organization" or page == "map" or page == "management":
 			return render(request, 'web/menu_1.html', {'page':page})
 
@@ -48,6 +49,8 @@ def menu(request, page):
 				information_posts = pagenator.get_page(page_number)
 				return render(request, 'web/menu_6.html', {'page':page, 'information_posts':information_posts})
 
+	except Exception:
+		return HttpResponse(status=404)
 
 def detail_post(request, page, post_pk):
 
