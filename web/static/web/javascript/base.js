@@ -18,7 +18,7 @@ $(document).ready(function(){
   });
   $('#header_section > div.mobile_toggle_menu_btn > img').click(function(){
     $('.mobile_menu>li').find('ul').hide();
-    $('.mobile_menu').toggle(200);
+    $('.mobile_menu').toggle(100);
   });
   $('.mobile_menu>li').click(function(){
     $('.mobile_menu>li').find('ul').hide();

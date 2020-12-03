@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(selector).css('opacity', '0.7');
   }
 
-  href = window.location.href.replace("http://kbu6829.pythonanywhere.com/","");
+  href = window.location.href.replace("http://www.neungseong.com/","");
 
   if (href == "company"){
     selector = '#content_menu > ul > a:nth-child(1) > li'

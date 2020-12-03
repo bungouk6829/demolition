@@ -9,3 +9,77 @@ $(document).ready(function(){
   change_color(selector);
 
 });
+
+//new_information_post <form> 유효성 검사
+function validate() {
+       var re1 = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]{1,10}$/;
+       var re2 = /^[a-zA-Z0-9]{4,20}$/;
+       var re3 = /^[0-9]{10,21}$/;
+       var re4 = /^.{1,100}$/;
+       var re5 = /^.{1,5000}$/;
+
+       var author = document.getElementById("author");
+       var password = document.getElementById("password");
+       var phone_number = document.getElementById("phone_number");
+       var title = document.getElementById("title");
+       var text = document.getElementById("text");
+
+       if(!check(re1,author,"작성자는 한글로 1~10 자로만 가능합니다.")) {
+           return false;
+       }
+       if(!check(re2,password,"비밀번호는 영문과 숫자로 4~20자로만 가능합니다.")) {
+           return false;
+       }
+       if(!check(re3,phone_number,"전화번호는 10자리~20자의 숫자로만 가능합니다.\n\n('-'기호는 입력하지 않습니다.)")) {
+           return false;
+       }
+       if(!check(re4,title,"문의제목은 1~100 자로만 가능합니다.")) {
+           return false;
+       }
+       if(!check(re5,text,"문의내용은 1~5000 자로만 가능합니다.")) {
+           return false;
+       }
+       alert("문의글 작성이 완료되었습니다.");
+   }
+
+function check(re, what, message) {
+    if(re.test(what.value)) {
+        return true;
+    }
+    alert(message);
+    what.value = "";
+    what.focus();
+}
+
+
+// 첨부파일 용량 확인
+function fileCheck( file )
+{
+        // 사이즈체크
+        var maxSize  = 5 * 1024 * 1024    //30MB
+        var fileSize = 0;
+
+	// 브라우저 확인
+	var browser=navigator.appName;
+
+	// 익스플로러일 경우
+	if (browser=="Microsoft Internet Explorer")
+	{
+		var oas = new ActiveXObject("Scripting.FileSystemObject");
+		fileSize = oas.getFile( file.value ).size;
+	}
+
+	// 익스플로러가 아닐경우
+	else
+	{
+		fileSize = file.files[0].size;
+	}
+
+	alert("파일사이즈 : "+ fileSize +", 최대파일사이즈 : 5MB");
+        if(fileSize > maxSize)
+        {
+            alert("첨부파일 사이즈는 5MB 이내로 등록 가능합니다.    ");
+            return;
+        }
+        document.fileForm.submit();
+}

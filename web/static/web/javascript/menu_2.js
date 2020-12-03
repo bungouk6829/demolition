@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(selector).css('opacity', '0.7');
   }
 
-  href = window.location.href.replace("http://kbu6829.pythonanywhere.com/","");
+  href = window.location.href.replace("http://www.neungseong.com/","");
 
   if (href == "business"){
     selector = '#content_menu > ul > a:nth-child(1) > li'
@@ -16,4 +16,19 @@ $(document).ready(function(){
     selector = '#content_menu > ul > a:nth-child(2) > li'
     change_color(selector);
   }
+
+  $('.mg-link').magnificPopup({
+       type: 'image',
+       closeOnContentClick: true,
+       closeBtnInside: true,
+       fixedContentPos: true,
+       image: {    verticalFit: true,
+                   titleSrc: 'title',
+                   titleSrc: function(item) {
+                     return '<h3>' + item.el.find('img').attr('alt') + '</h3>' + item.el.attr('title');
+                   }
+              },
+       gallery: {   enabled: true    }, // 좌우로 사진 돌려보기 생성
+       zoom: {    enabled: true,   duration: 400    }
+    });
 });

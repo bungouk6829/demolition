@@ -123,6 +123,14 @@
   font-size: 13px;
 }
 
+.detail_information_box_title{
+   word-break: break-all;
+}
+
+.file_box > a > h2{
+   word-break: break-all;
+}
+
 
 @media all and (max-width:1280px) {
 

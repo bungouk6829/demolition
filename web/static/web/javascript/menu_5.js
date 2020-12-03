@@ -13,5 +13,4 @@ $(document).ready(function(){
     type: 'image',
     closeOnContentClick: true
   });
-  
 });

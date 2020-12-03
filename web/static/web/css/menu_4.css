@@ -6,9 +6,24 @@
   height: 650px;
 }
 
+.equipment_box h1{
+  text-align: center;
+  color:#2a4ed4;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.equipment_box p{
+  text-align: center;
+  color:gray;
+  font-size: 13px;
+  font-weight: 300;
+}
+
 .equipment_img_box{
+  margin-top: 30px;
   width: 50%;
-  height: 200px;
+  height: 250px;
   float: left;
   text-align: center;
 }
@@ -61,6 +76,14 @@
   .equipment_img_box{
     width: 100%;
     height: auto;
+  }
+
+  .equipment_box h1{
+    font-size: 18px;
+  }
+
+  .equipment_box p{
+    font-size: 13px;
   }
 
   .equipment_img_box img{
