@@ -56,11 +56,6 @@ class Information_post(models.Model):
     phone_number = models.CharField(max_length=20, verbose_name="전화번호")
     create_at = models.DateField(auto_now_add=True, verbose_name="날짜")
     clicks = models.IntegerField(default=1, verbose_name="조회수")
-    file_1 = models.FileField(upload_to='files/%Y%m%d', null=True, blank=True, verbose_name="파일")
-    file_2 = models.FileField(upload_to='files/%Y%m%d', null=True, blank=True, verbose_name="파일")
-    file_3 = models.FileField(upload_to='files/%Y%m%d', null=True, blank=True, verbose_name="파일")
-    file_4 = models.FileField(upload_to='files/%Y%m%d', null=True, blank=True, verbose_name="파일")
-    file_5 = models.FileField(upload_to='files/%Y%m%d', null=True, blank=True, verbose_name="파일")
 
     @property
     def update_clicks(self):

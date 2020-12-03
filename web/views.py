@@ -109,11 +109,6 @@ def new_information_post(request, page):
 				phone_number=request.POST['phone_number'],
 				title=request.POST['title'],
 				text=request.POST['text'],
-				file_1=request.FILES.get('file_1',''),
-				file_2=request.FILES.get('file_2',''),
-				file_3=request.FILES.get('file_3',''),
-				file_4=request.FILES.get('file_4',''),
-				file_5=request.FILES.get('file_5',''),
 			)
 
 			information_posts_all = Information_post.objects.all().order_by('-id')

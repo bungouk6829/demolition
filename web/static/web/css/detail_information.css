@@ -80,25 +80,6 @@
   background: #f3f6f7;
 }
 
-.file_box h1{
-  font-size: 13px;
-  font-weight: 300;
-  color:black;
-}
-
-.file_box a h2{
-  cursor:pointer;
-  font-size: 13px;
-  font-weight: 300;
-  color:black;
-}
-
-.file_box h2{
-  font-size: 13px;
-  font-weight: 300;
-  color:black;
-}
-
 .post_text{
   font-size: 15px;
   font-weight: 300;
