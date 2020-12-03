@@ -22,7 +22,7 @@
 
 {%block container%}
       <div class="new_information_box">
-        <form class="new_information_form" onsubmit="return validate();" action="{%url 'web:new_information_post' page='information'%}" method="post">
+        <form class="new_information_form" onsubmit="return validate();" action="{%url 'web:new_information_post' page='information'%}" method="post" >
           {%csrf_token%}
         <table class="new_information_table">
           <thead>
@@ -46,11 +46,11 @@
           </table>
           <div class="file_box">
             <h1> 첨부파일 </h1>
-            <input type="file" name="file_1" onclick="fileCheck(this.form.file_1)">
-            <input type="file" name="file_2" onclick="fileCheck(this.form.file_2)">
-            <input type="file" name="file_3" onclick="fileCheck(this.form.file_3)">
-            <input type="file" name="file_4" onclick="fileCheck(this.form.file_4)">
-            <input type="file" name="file_5" onclick="fileCheck(this.form.file_5)">
+            <input id="file_1" type="file" name="file_1">
+            <input id="file_2"type="file" name="file_2">
+            <input id="file_3"type="file" name="file_3">
+            <input id="file_4"type="file" name="file_4">
+            <input id="file_5"type="file" name="file_5">
           </div>
           <div class="post_text">
             <textarea style="resize:none;" name="text" id="text"></textarea>

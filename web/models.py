@@ -27,11 +27,11 @@ class Notice_post(models.Model):
     text = models.TextField(max_length=10000, blank=True, null=True, verbose_name="내용")
     create_at = models.DateField(auto_now_add=True, verbose_name="날짜")
     clicks = models.IntegerField(default=1, verbose_name="조회수")
-    file_1 = models.FileField(upload_to='files/', null=True, blank=True, verbose_name="파일")
-    file_2 = models.FileField(upload_to='files/', null=True, blank=True, verbose_name="파일")
-    file_3 = models.FileField(upload_to='files/', null=True, blank=True, verbose_name="파일")
-    file_4 = models.FileField(upload_to='files/', null=True, blank=True, verbose_name="파일")
-    file_5 = models.FileField(upload_to='files/', null=True, blank=True, verbose_name="파일")
+    file_1 = models.FileField(upload_to='', null=True, blank=True, verbose_name="파일")
+    file_2 = models.FileField(upload_to='', null=True, blank=True, verbose_name="파일")
+    file_3 = models.FileField(upload_to='', null=True, blank=True, verbose_name="파일")
+    file_4 = models.FileField(upload_to='', null=True, blank=True, verbose_name="파일")
+    file_5 = models.FileField(upload_to='', null=True, blank=True, verbose_name="파일")
 
 
     @property

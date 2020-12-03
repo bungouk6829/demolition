@@ -10,6 +10,32 @@ $(document).ready(function(){
 
 });
 
+// 첨부파일 용량 검사
+function fileCheck( file )
+{
+  // 사이즈체크
+  var maxSize  = 10 * 1024 * 1024    //10MB
+  var fileSize = 0;
+	// 브라우저 확인
+	var browser=navigator.appName;
+
+	// 익스플로러일 경우
+	if (browser=="Microsoft Internet Explorer"){
+		var oas = new ActiveXObject("Scripting.FileSystemObject");
+		fileSize = oas.getFile( file.value ).size;
+	}
+	// 익스플로러가 아닐경우
+	else{
+		fileSize = file.files[0].size;
+	}
+  if(fileSize > maxSize){
+    alert(file.id.replace("file_","")+"번째 첨부파일 용량이 초과합니다.\n첨부파일은 하나당 사이즈는  10MB 이내로 등록 가능합니다.");
+    return false;
+  }
+  return true;
+}
+
+
 //new_information_post <form> 유효성 검사
 function validate() {
        var re1 = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]{1,10}$/;
@@ -23,6 +49,11 @@ function validate() {
        var phone_number = document.getElementById("phone_number");
        var title = document.getElementById("title");
        var text = document.getElementById("text");
+       var file_1 = document.getElementById("file_1");
+       var file_2 = document.getElementById("file_2");
+       var file_3 = document.getElementById("file_3");
+       var file_4 = document.getElementById("file_4");
+       var file_5 = document.getElementById("file_5");
 
        if(!check(re1,author,"작성자는 한글로 1~10 자로만 가능합니다.")) {
            return false;
@@ -39,7 +70,21 @@ function validate() {
        if(!check(re5,text,"문의내용은 1~5000 자로만 가능합니다.")) {
            return false;
        }
-       alert("문의글 작성이 완료되었습니다.");
+       if(!fileCheck(file_1)){
+           return false;
+       }
+       if(!fileCheck(file_2)){
+           return false;
+       }
+       if(!fileCheck(file_3)){
+           return false;
+       }
+       if(!fileCheck(file_4)){
+           return false;
+       }
+       if(!fileCheck(file_5)){
+           return false;
+       }
    }
 
 function check(re, what, message) {
@@ -49,37 +94,4 @@ function check(re, what, message) {
     alert(message);
     what.value = "";
     what.focus();
-}
-
-
-// 첨부파일 용량 확인
-function fileCheck( file )
-{
-        // 사이즈체크
-        var maxSize  = 5 * 1024 * 1024    //30MB
-        var fileSize = 0;
-
-	// 브라우저 확인
-	var browser=navigator.appName;
-
-	// 익스플로러일 경우
-	if (browser=="Microsoft Internet Explorer")
-	{
-		var oas = new ActiveXObject("Scripting.FileSystemObject");
-		fileSize = oas.getFile( file.value ).size;
-	}
-
-	// 익스플로러가 아닐경우
-	else
-	{
-		fileSize = file.files[0].size;
-	}
-
-	alert("파일사이즈 : "+ fileSize +", 최대파일사이즈 : 5MB");
-        if(fileSize > maxSize)
-        {
-            alert("첨부파일 사이즈는 5MB 이내로 등록 가능합니다.    ");
-            return;
-        }
-        document.fileForm.submit();
 }
