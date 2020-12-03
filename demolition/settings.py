@@ -82,7 +82,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/media/files/'
+MEDIA_URL = '/media/'
 
 DATE_FORMAT = 'Y.m.d'
 

@@ -102,7 +102,6 @@ def input_information_post_password(request, page, post_pk, name):
 
 def new_information_post(request, page):
 
-	try:
 		if request.method == "POST":
 			Information_post.objects.create(
 				author=request.POST['author'],
@@ -110,12 +109,13 @@ def new_information_post(request, page):
 				phone_number=request.POST['phone_number'],
 				title=request.POST['title'],
 				text=request.POST['text'],
-				file_1=request.POST['file_1'],
-				file_2=request.POST['file_2'],
-				file_3=request.POST['file_3'],
-				file_4=request.POST['file_4'],
-				file_5=request.POST['file_5'],
+				file_1=request.FILES.get('file_1',''),
+				file_2=request.FILES.get('file_2',''),
+				file_3=request.FILES.get('file_3',''),
+				file_4=request.FILES.get('file_4',''),
+				file_5=request.FILES.get('file_5',''),
 			)
+
 			information_posts_all = Information_post.objects.all().order_by('-id')
 			page_number = int(request.GET.get('p', 1))
 			pagenator = Paginator(information_posts_all, 11)
@@ -124,6 +124,3 @@ def new_information_post(request, page):
 
 		else:
 			return render(request, 'web/new_information_post.html', {'page':page})
-
-	except Exception:
-		return HttpResponse(status=404)
