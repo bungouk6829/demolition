@@ -52,7 +52,7 @@
   font-weight: 500;
   color:#8d9ff2;
   text-shadow: 5px 5px 5px black;
-  cursor:none;
+  cursor:default;
 }
 
 .main_introduce_box{
