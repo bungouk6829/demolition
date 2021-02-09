@@ -214,8 +214,23 @@
   color:black;
 }
 
+#wrap_section > div > div > div > p.pc_main_intro{
+  display:contents;
+}
+
+#wrap_section > div > div > div > p.mobile_main_intro{
+  display:none;
+}
 
 @media all and (max-width:1280px) {
+  
+  #wrap_section > div > div > div > p.pc_main_intro{
+    display:none;
+  }
+
+  #wrap_section > div > div > div > p.mobile_main_intro{
+    display:contents;
+  }
 
   #wrap_section{
     width: 100%;
