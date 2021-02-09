@@ -367,8 +367,8 @@
   }
 
   .map h1, .tel h1, .fax h1, .email h1{
-    font-size:20px;
-    line-height:30px;
+    font-size:18px;
+    line-height:28px;
   }
 
   .map p, .tel p, .fax p, .email p{
