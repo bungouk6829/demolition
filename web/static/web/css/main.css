@@ -225,6 +225,7 @@
 
 @media all and (max-width:1280px) {
 
+
   #wrap_section > div > div > div > p.pc_main_intro{
     display:none;
   }
@@ -236,6 +237,7 @@
   #wrap_section{
     width: 100%;
     height: auto;
+    overflow-x: hidden;
   }
 
   .main_img_box{
@@ -391,6 +393,7 @@
   .map, .tel, .fax, .email{
     width: 100%;
     height: auto;
+    box-sizing: border-box;
     padding:0 10%;
     line-height:1px;
   }
