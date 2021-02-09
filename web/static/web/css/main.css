@@ -50,7 +50,7 @@
   font-size: 20px;
   display: inline;
   font-weight: 500;
-  color:white;
+  color:#8d9ff2;
   text-shadow: 5px 5px 5px black;
   cursor:pointer;
 }
@@ -192,7 +192,7 @@
 
 .tel h1, .fax h1, .email h1{
   font-size: 30px;
-  color:#122B88;
+  color:#122b88;
   font-weight: 500;
   line-height: 40px;
 }
@@ -222,8 +222,9 @@
   display:none;
 }
 
+
 @media all and (max-width:1280px) {
-  
+
   #wrap_section > div > div > div > p.pc_main_intro{
     display:none;
   }
@@ -244,15 +245,18 @@
 
   .main_img{
     width:100%;
-    height: 600px;
+    height: 800px;
     background-image: url('../img/main_img_2.jpg');
     background-size: cover;
     background-attachment:scroll;
   }
 
   .main_introduce_box{
+    margin-top:70px;
     width: 70%;
-    height: auto;
+    height: 450px;
+    box-sizing: border-box;
+    line-height:25px;
   }
 
   .main_introduce_box h1{
@@ -265,6 +269,9 @@
 
   .main_introduce_box p{
     font-size: 15px;
+    box-sizing: border-box;
+    padding:0 10px;
+    line-height:35px;
   }
 
   #first_section{
@@ -350,16 +357,29 @@
   }
 
   .info_box{
-    text-align: center;
+    text-align: left;
+    box-sizing: border-box;
     width: 100%;
     height: auto;
     margin-bottom: 30px;
+  }
+
+  .map h1, .tel h1, .fax h1, .email h1{
+    font-size:23px;
+    line-height:33px;
+  }
+
+  .map p, .tel p, .fax p, .email p{
+    font-size:15px;
+    line-height:18px;
   }
 
   .map_img{
     width: 100%;
     height: auto;
     text-align: center;
+    margin-bottom: 30px;
+    box-sizing: border-box;
   }
 
   .map_img img{
@@ -371,16 +391,14 @@
   .map, .tel, .fax, .email{
     width: 100%;
     height: auto;
+    padding:0 10%;
+    line-height:1px;
   }
 
   .map img, .tel img, .fax img, .email img{
     width: 20px;
     height: 20px;
     padding-top: 10px;
-  }
-
-  .map h1, .map p, .tel h1, .tel p, .fax h1, .fax p, .email h1{
-    font-size: 15px;
   }
 
 
