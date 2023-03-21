@@ -33,7 +33,7 @@
 .business_box{
   padding-top: 100px;
   width: 100%;
-  height: 850px;
+  height: auto;
   text-align: center;
 }
 
@@ -46,11 +46,10 @@
 .business_img_box{
   width: 250px;
   height: 230px;
-  float: left;
+  margin: 15px;
+  display: inline-block;
   background:#2a4ed4;
   border-radius: 5px;
-  margin-left: 50px;
-  margin-top: 15px;
 }
 
 .business_img_box h2{
@@ -66,7 +65,8 @@
 
 .major_img_box{
   width:100%;
-  padding:30px;
+  padding:30px 0;
+  text-align: center;
 }
 
 .major_img_box h1{
@@ -87,13 +87,8 @@
   display:inline-block;
   width:400px;
   height:300px;
-  margin-left:25px;
+  margin: 15px;
 }
-
-.major_img_box a:nth-child(1) > img{
-  margin-left:0px;
-}
-
 
 @media all and (max-width:1280px) {
 
@@ -115,6 +110,8 @@
     margin: 0px;
     padding: 0px;
     background:white;
+    text-align: center;
+    display: inline-block;
   }
 
   .business_box h1{
@@ -123,17 +120,16 @@
   }
 
   .business_img_box{
-    text-align: center;
+    display: inline-block;
   }
 
   .major_img_box{
     text-align: center;
-    margin:0px;
-    padding: 0px;
-    padding-top: 50px;
+    margin:15px;
   }
 
   #container_section > div.content_box > div.major_img_box > a > img{
+    display: inline-block;
     margin:0px;
     padding: 0px;
     width:300px;
